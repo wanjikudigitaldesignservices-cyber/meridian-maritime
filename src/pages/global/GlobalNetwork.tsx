@@ -1,11 +1,12 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import portsData from '@/data/seed/ports.json';
+import { Anchor, ArrowRight, Navigation, MapPin } from 'lucide-react';
+import { usePorts } from '@/hooks/useSupabaseData';
 import { REGIONS } from '@/lib/regions';
-import { MapPin } from 'lucide-react';
 
 export function GlobalNetwork() {
-  const [selectedRegion, setSelectedRegion] = useState<string | null>(null);
+  const [selectedRegion, setSelectedRegion] = useState<string>('all');
+  const { data: portsData, isLoading, error } = usePorts();
 
   // SVG coordinates mapping
   const mapWidth = 1000;
@@ -14,7 +15,10 @@ export function GlobalNetwork() {
   const getX = (lng: string) => ((parseFloat(lng) + 180) * (mapWidth / 360));
   const getY = (lat: string) => ((90 - parseFloat(lat)) * (mapHeight / 180));
 
-  const filteredPorts = selectedRegion ? portsData.filter(p => p.region === selectedRegion) : portsData;
+  const ports = portsData || [];
+  const filteredPorts = selectedRegion === 'all'
+    ? ports
+    : ports.filter(p => p.region === selectedRegion);
 
   return (
     <div className="w-full bg-plimsoll min-h-screen">
@@ -31,8 +35,8 @@ export function GlobalNetwork() {
         {/* Region Filters */}
         <div className="flex flex-wrap gap-4 mb-8 justify-center">
           <button
-            onClick={() => setSelectedRegion(null)}
-            className={`px-4 py-2 rounded-sm text-sm font-mono tracking-wider transition-colors ${!selectedRegion ? 'bg-hull text-white' : 'bg-white border border-steel/20 text-deck-grey hover:border-hull'}`}
+            onClick={() => setSelectedRegion('all')}
+            className={`px-4 py-2 rounded-sm text-sm font-mono tracking-wider transition-colors ${selectedRegion === 'all' ? 'bg-hull text-white' : 'bg-white border border-steel/20 text-deck-grey hover:border-hull'}`}
           >
             ALL REGIONS
           </button>
@@ -106,54 +110,44 @@ export function GlobalNetwork() {
         </div>
 
         {/* Port List */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPorts.map(port => {
-            const region = REGIONS.find(r => r.slug === port.region);
-            return (
-              <div key={port.id} className="bg-white border border-steel/20 p-6 flex flex-col hover:border-hull transition-colors group">
+        {isLoading ? (
+          <div className="py-24 text-center text-steel">Loading network data...</div>
+        ) : error ? (
+          <div className="py-24 text-center text-red-500">Failed to load network data.</div>
+        ) : (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {filteredPorts.map(port => (
+              <Link 
+                key={port.id}
+                to={`/${port.region}/ports/${port.slug}`}
+                className="bg-white border border-steel/20 p-6 flex flex-col hover:shadow-md hover:border-hull transition-all group"
+              >
                 <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <div className="text-xs font-mono uppercase tracking-wider mb-2" style={{ color: region?.accent }}>
-                      {port.country}
-                    </div>
-                    <h3 className="text-xl font-heading text-hull">{port.name}</h3>
-                  </div>
-                  <div className="bg-plimsoll px-2 py-1 rounded text-xs font-mono text-deck-grey">
+                  <div className="text-xs font-mono uppercase tracking-wider text-deck-grey">
                     {port.unlocode}
                   </div>
+                  <Anchor className="w-5 h-5 text-steel group-hover:text-accent transition-colors" />
                 </div>
-                
-                <div className="grid grid-cols-2 gap-4 mb-6">
+                <h3 className="text-2xl font-heading text-hull mb-2 group-hover:text-accent transition-colors">
+                  {port.name}
+                </h3>
+                <div className="text-deck-grey mb-6">
+                  {port.country}
+                </div>
+                <div className="grid grid-cols-2 gap-4 mt-auto border-t border-steel/10 pt-4">
                   <div>
-                    <div className="text-xs text-deck-grey uppercase tracking-wider">Max Draught</div>
-                    <div className="font-mono text-hull">{port.maxDraught}m {port.indicative && '*'}</div>
+                    <div className="text-xs text-deck-grey uppercase tracking-wider mb-1">Max Draft</div>
+                    <div className="font-mono text-hull text-sm">{port.maxDraught ? `${port.maxDraught}m` : 'N/A'}</div>
                   </div>
                   <div>
-                    <div className="text-xs text-deck-grey uppercase tracking-wider">Max LOA</div>
-                    <div className="font-mono text-hull">{port.maxLoa}m {port.indicative && '*'}</div>
+                    <div className="text-xs text-deck-grey uppercase tracking-wider mb-1">Berths</div>
+                    <div className="font-mono text-hull text-sm">{port.berthCount || 'Multiple'}</div>
                   </div>
                 </div>
-
-                <div className="mt-auto pt-4 border-t border-steel/10 flex justify-between items-center">
-                  <div className="flex gap-2">
-                    {port.cargoTypes.map(type => (
-                      <span key={type} className="text-[10px] uppercase tracking-wider bg-plimsoll px-2 py-1 rounded text-deck-grey">
-                        {type.replace('-', ' ')}
-                      </span>
-                    ))}
-                  </div>
-                  <Link 
-                    to={`/${port.region}/ports/${port.slug}`}
-                    className="text-hull hover:text-accent transition-colors"
-                    title="View Port Details"
-                  >
-                    <MapPin className="w-5 h-5" />
-                  </Link>
-                </div>
-              </div>
-            )
-          })}
-        </div>
+              </Link>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

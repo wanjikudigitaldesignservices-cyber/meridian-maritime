@@ -1,14 +1,25 @@
 import { useParams, Link } from 'react-router-dom';
 import { REGIONS, type ServiceSlug } from '@/lib/regions';
-import servicesData from '@/data/seed/services.json';
+import { useServices } from '@/hooks/useSupabaseData';
 import { Button } from '@/components/ui/button';
 
 export function RegionServiceDetail() {
   const { regionId, serviceSlug } = useParams();
   const region = REGIONS.find(r => r.slug === regionId);
-  const service = servicesData.find(s => s.slug === serviceSlug);
+  const { data: servicesData, isLoading, error } = useServices();
 
-  if (!region || !service || !region.serviceSlugs.includes(service.slug as ServiceSlug)) {
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-plimsoll flex items-center justify-center">
+        <p className="text-xl text-steel">Loading service data...</p>
+      </div>
+    );
+  }
+
+  const services = servicesData || [];
+  const service = services.find(s => s.slug === serviceSlug);
+
+  if (!region || !service || !region.serviceSlugs.includes(service.slug as ServiceSlug) || error) {
     return (
       <div className="min-h-screen bg-plimsoll flex items-center justify-center">
         <p className="text-xl text-deck-grey">Service not available in this region.</p>

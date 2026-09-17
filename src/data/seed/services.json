@@ -1,30 +1,254 @@
 [
-  { "id": "svc-01", "division": "Agency", "slug": "ship-agency", "name": "Ship Agency & Husbandry" },
-  { "id": "svc-02", "division": "Agency", "slug": "crew-change", "name": "Crew Change Services" },
-  { "id": "svc-03", "division": "Agency", "slug": "ship-chandling", "name": "Ship Chandling & Supply" },
-  { "id": "svc-04", "division": "Logistics", "slug": "customs-brokerage", "name": "Customs Brokerage & Clearance" },
-  { "id": "svc-05", "division": "Logistics", "slug": "inland-logistics", "name": "Inland & Corridor Logistics" },
-  { "id": "svc-06", "division": "Logistics", "slug": "warehousing-cfs", "name": "Warehousing & Container Freight Stations" },
-  { "id": "svc-07", "division": "Logistics", "slug": "project-cargo", "name": "Project Cargo & Breakbulk" },
-  { "id": "svc-08", "division": "Cargo", "slug": "bulk-cargo-handling", "name": "Bulk Cargo Handling" },
-  { "id": "svc-09", "division": "Cargo", "slug": "dry-bulk-export", "name": "Dry Bulk Export Coordination" },
-  { "id": "svc-10", "division": "Cargo", "slug": "reefer-logistics", "name": "Reefer & Cold Chain Logistics" },
-  { "id": "svc-11", "division": "Cargo", "slug": "liquid-bulk-storage", "name": "Liquid Bulk & Tank Storage" },
-  { "id": "svc-12", "division": "Marine", "slug": "bunkering", "name": "Marine Fuels & Bunkering" },
-  { "id": "svc-13", "division": "Marine", "slug": "tanker-lightering", "name": "Tanker Lightering" },
-  { "id": "svc-14", "division": "Marine", "slug": "offshore-support", "name": "Offshore & Subsea Vessel Support" },
-  { "id": "svc-15", "division": "Management", "slug": "ship-management", "name": "Technical Ship Management" },
-  { "id": "svc-16", "division": "Management", "slug": "crew-management", "name": "Crew Management & Manning" },
-  { "id": "svc-17", "division": "Management", "slug": "newbuild-supervision", "name": "Newbuild & Drydock Supervision" },
-  { "id": "svc-18", "division": "Commercial", "slug": "chartering-brokerage", "name": "Chartering & S&P Brokerage" },
-  { "id": "svc-19", "division": "Commercial", "slug": "marine-insurance", "name": "Marine Insurance & P&I Correspondence" },
-  { "id": "svc-20", "division": "Compliance", "slug": "emissions-advisory", "name": "Emissions & Decarbonisation Advisory" },
-  { "id": "svc-21", "division": "Compliance", "slug": "biosecurity-compliance", "name": "Biosecurity & Quarantine Compliance" },
-  { "id": "svc-22", "division": "Compliance", "slug": "marine-surveying", "name": "Marine Surveying & Inspection" },
-  { "id": "svc-23", "division": "Polar", "slug": "polar-logistics", "name": "Polar Logistics" },
-  { "id": "svc-24", "division": "Polar", "slug": "research-station-resupply", "name": "Research Station Resupply" },
-  { "id": "svc-25", "division": "Polar", "slug": "expedition-support", "name": "Expedition Vessel Support" },
-  { "id": "svc-26", "division": "Polar", "slug": "polar-crew-training", "name": "Polar Code Crew Training" },
-  { "id": "svc-27", "division": "Polar", "slug": "environmental-compliance", "name": "Environmental Protocol Compliance" },
-  { "id": "svc-28", "division": "Cargo", "slug": "cabotage-support", "name": "Coastal Cabotage Support" }
+  {
+    "id": "a341d7ef-0b6d-478e-96fd-1fc841a44890",
+    "slug": "ship-agency",
+    "name": "Ship Agency & Husbandry",
+    "division": "Agency",
+    "short_description": "Ship Agency & Husbandry",
+    "long_description": "Ship Agency & Husbandry description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "4a60bc11-fdaf-4780-b116-34efdb689517",
+    "slug": "crew-change",
+    "name": "Crew Change Services",
+    "division": "Agency",
+    "short_description": "Crew Change Services",
+    "long_description": "Crew Change Services description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "e460fee2-4ca4-4fe4-9e6f-32e7746ea335",
+    "slug": "ship-chandling",
+    "name": "Ship Chandling & Supply",
+    "division": "Agency",
+    "short_description": "Ship Chandling & Supply",
+    "long_description": "Ship Chandling & Supply description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "68bd6481-add4-4e39-b6bb-1da1f9c849ad",
+    "slug": "customs-brokerage",
+    "name": "Customs Brokerage & Clearance",
+    "division": "Logistics",
+    "short_description": "Customs Brokerage & Clearance",
+    "long_description": "Customs Brokerage & Clearance description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "1459c0b2-986f-4ff5-9665-032f04f4cab0",
+    "slug": "inland-logistics",
+    "name": "Inland & Corridor Logistics",
+    "division": "Logistics",
+    "short_description": "Inland & Corridor Logistics",
+    "long_description": "Inland & Corridor Logistics description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "f55ee5ac-d906-46e6-978e-5e111a16954f",
+    "slug": "warehousing-cfs",
+    "name": "Warehousing & Container Freight Stations",
+    "division": "Logistics",
+    "short_description": "Warehousing & Container Freight Stations",
+    "long_description": "Warehousing & Container Freight Stations description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "6070849b-8444-48da-abda-6a7f52e1eef1",
+    "slug": "project-cargo",
+    "name": "Project Cargo & Breakbulk",
+    "division": "Logistics",
+    "short_description": "Project Cargo & Breakbulk",
+    "long_description": "Project Cargo & Breakbulk description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "f2c38511-c925-4bf6-8a1b-e4ba02b2afc5",
+    "slug": "bulk-cargo-handling",
+    "name": "Bulk Cargo Handling",
+    "division": "Cargo",
+    "short_description": "Bulk Cargo Handling",
+    "long_description": "Bulk Cargo Handling description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "f53cf79b-e24b-4e2a-a453-07552e5a8935",
+    "slug": "dry-bulk-export",
+    "name": "Dry Bulk Export Coordination",
+    "division": "Cargo",
+    "short_description": "Dry Bulk Export Coordination",
+    "long_description": "Dry Bulk Export Coordination description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "724a250d-967d-49cd-856f-e2b93aa55f7c",
+    "slug": "reefer-logistics",
+    "name": "Reefer & Cold Chain Logistics",
+    "division": "Cargo",
+    "short_description": "Reefer & Cold Chain Logistics",
+    "long_description": "Reefer & Cold Chain Logistics description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "2857799c-244d-42a4-b97b-0b9dbc6601bc",
+    "slug": "liquid-bulk-storage",
+    "name": "Liquid Bulk & Tank Storage",
+    "division": "Cargo",
+    "short_description": "Liquid Bulk & Tank Storage",
+    "long_description": "Liquid Bulk & Tank Storage description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "07dabc01-d075-4d9f-9835-ba8d07517644",
+    "slug": "bunkering",
+    "name": "Marine Fuels & Bunkering",
+    "division": "Marine",
+    "short_description": "Marine Fuels & Bunkering",
+    "long_description": "Marine Fuels & Bunkering description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "81efac25-e0b1-4b56-835c-e42c3b715be9",
+    "slug": "tanker-lightering",
+    "name": "Tanker Lightering",
+    "division": "Marine",
+    "short_description": "Tanker Lightering",
+    "long_description": "Tanker Lightering description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "2cccee8d-6c00-4001-b453-6a898cf33ce6",
+    "slug": "offshore-support",
+    "name": "Offshore & Subsea Vessel Support",
+    "division": "Marine",
+    "short_description": "Offshore & Subsea Vessel Support",
+    "long_description": "Offshore & Subsea Vessel Support description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "4099fca5-9731-4852-ae81-10646b8065a9",
+    "slug": "ship-management",
+    "name": "Technical Ship Management",
+    "division": "Management",
+    "short_description": "Technical Ship Management",
+    "long_description": "Technical Ship Management description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "28210512-7af9-45a9-a461-e12625ad4af8",
+    "slug": "crew-management",
+    "name": "Crew Management & Manning",
+    "division": "Management",
+    "short_description": "Crew Management & Manning",
+    "long_description": "Crew Management & Manning description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "0e9f6b8c-9e6f-47c7-a568-68b0fe8dea73",
+    "slug": "newbuild-supervision",
+    "name": "Newbuild & Drydock Supervision",
+    "division": "Management",
+    "short_description": "Newbuild & Drydock Supervision",
+    "long_description": "Newbuild & Drydock Supervision description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "f3e4120d-6478-4433-b245-1079cab478d9",
+    "slug": "chartering-brokerage",
+    "name": "Chartering & S&P Brokerage",
+    "division": "Commercial",
+    "short_description": "Chartering & S&P Brokerage",
+    "long_description": "Chartering & S&P Brokerage description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "7e062ebf-8ac9-4012-ab5b-52a32bb4923c",
+    "slug": "marine-insurance",
+    "name": "Marine Insurance & P&I Correspondence",
+    "division": "Commercial",
+    "short_description": "Marine Insurance & P&I Correspondence",
+    "long_description": "Marine Insurance & P&I Correspondence description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "f4d41939-b7bb-4244-a899-18b0a05ffd14",
+    "slug": "emissions-advisory",
+    "name": "Emissions & Decarbonisation Advisory",
+    "division": "Compliance",
+    "short_description": "Emissions & Decarbonisation Advisory",
+    "long_description": "Emissions & Decarbonisation Advisory description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "c7d1f980-81e7-4670-8763-5f1b6ce9210b",
+    "slug": "biosecurity-compliance",
+    "name": "Biosecurity & Quarantine Compliance",
+    "division": "Compliance",
+    "short_description": "Biosecurity & Quarantine Compliance",
+    "long_description": "Biosecurity & Quarantine Compliance description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "2a53b9ae-f371-41b7-944a-0219a85a703b",
+    "slug": "marine-surveying",
+    "name": "Marine Surveying & Inspection",
+    "division": "Compliance",
+    "short_description": "Marine Surveying & Inspection",
+    "long_description": "Marine Surveying & Inspection description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "01be6743-7075-4568-84ac-4e4d58ef35e5",
+    "slug": "polar-logistics",
+    "name": "Polar Logistics",
+    "division": "Polar",
+    "short_description": "Polar Logistics",
+    "long_description": "Polar Logistics description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "345a7a5d-2760-45d1-b010-eed5dd902c80",
+    "slug": "research-station-resupply",
+    "name": "Research Station Resupply",
+    "division": "Polar",
+    "short_description": "Research Station Resupply",
+    "long_description": "Research Station Resupply description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "5978755f-36ed-49af-a61b-88d6e9619544",
+    "slug": "expedition-support",
+    "name": "Expedition Vessel Support",
+    "division": "Polar",
+    "short_description": "Expedition Vessel Support",
+    "long_description": "Expedition Vessel Support description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "b4f2116e-98b5-4f02-9aa2-20705173fbb2",
+    "slug": "polar-crew-training",
+    "name": "Polar Code Crew Training",
+    "division": "Polar",
+    "short_description": "Polar Code Crew Training",
+    "long_description": "Polar Code Crew Training description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "2c291840-dbeb-4290-b58d-7a679e4a9f64",
+    "slug": "environmental-compliance",
+    "name": "Environmental Protocol Compliance",
+    "division": "Polar",
+    "short_description": "Environmental Protocol Compliance",
+    "long_description": "Environmental Protocol Compliance description",
+    "icon_name": "anchor"
+  },
+  {
+    "id": "198878ff-8c56-4477-b97c-2ba4e429fa76",
+    "slug": "cabotage-support",
+    "name": "Coastal Cabotage Support",
+    "division": "Cargo",
+    "short_description": "Coastal Cabotage Support",
+    "long_description": "Coastal Cabotage Support description",
+    "icon_name": "anchor"
+  }
 ]

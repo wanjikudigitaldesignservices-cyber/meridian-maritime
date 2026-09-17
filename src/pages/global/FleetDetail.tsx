@@ -1,13 +1,24 @@
 import { useParams, Link } from 'react-router-dom';
-import vesselsData from '@/data/seed/vessels.json';
+import { useVessels } from '@/hooks/useSupabaseData';
 import { ArrowLeft } from 'lucide-react';
 import { REGIONS } from '@/lib/regions';
 
 export function FleetDetail() {
   const { imoNumber } = useParams();
-  const vessel = vesselsData.find(v => v.imoNumber === imoNumber);
+  const { data: vesselsData, isLoading, error } = useVessels();
+  
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-plimsoll flex items-center justify-center">
+        <p className="text-xl text-steel">Loading vessel data...</p>
+      </div>
+    );
+  }
 
-  if (!vessel) {
+  const vessels = vesselsData || [];
+  const vessel = vessels.find(v => v.imoNumber === imoNumber);
+
+  if (!vessel || error) {
     return (
       <div className="min-h-screen bg-plimsoll flex items-center justify-center">
         <p className="text-xl text-deck-grey">Vessel not found.</p>

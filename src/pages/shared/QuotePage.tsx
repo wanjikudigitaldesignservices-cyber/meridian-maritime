@@ -4,8 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { REGIONS } from '@/lib/regions';
-import servicesData from '@/data/seed/services.json';
-import portsData from '@/data/seed/ports.json';
+import { useServices, usePorts } from '@/hooks/useSupabaseData';
 
 import {
   Form,
@@ -83,16 +82,19 @@ export function QuotePage() {
   });
 
   const watchRegion = form.watch('region');
+  
+  const { data: servicesData, isLoading: isLoadingServices } = useServices();
+  const { data: portsData, isLoading: isLoadingPorts } = usePorts();
 
   // Available services based on selected region
-  const availableServices = watchRegion 
+  const availableServices = watchRegion && servicesData
     ? servicesData.filter(s => {
         const r = REGIONS.find(reg => reg.slug === watchRegion);
         return r?.serviceSlugs.includes(s.slug as any);
       })
     : [];
 
-  const availablePorts = watchRegion
+  const availablePorts = watchRegion && portsData
     ? portsData.filter(p => p.region === watchRegion)
     : [];
 
@@ -250,9 +252,13 @@ export function QuotePage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            {availableServices.map(s => (
-                              <SelectItem key={s.slug} value={s.slug}>{s.name}</SelectItem>
-                            ))}
+                            {isLoadingServices ? (
+                              <SelectItem value="loading" disabled>Loading services...</SelectItem>
+                            ) : (
+                              availableServices.map(s => (
+                                <SelectItem key={s.slug} value={s.slug}>{s.name}</SelectItem>
+                              ))
+                            )}
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -311,9 +317,13 @@ export function QuotePage() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            {availablePorts.map(p => (
-                              <SelectItem key={p.slug} value={p.slug}>{p.name}</SelectItem>
-                            ))}
+                            {isLoadingPorts ? (
+                              <SelectItem value="loading" disabled>Loading ports...</SelectItem>
+                            ) : (
+                              availablePorts.map(p => (
+                                <SelectItem key={p.slug} value={p.slug}>{p.name}</SelectItem>
+                              ))
+                            )}
                             <SelectItem value="other">Other / Not Listed</SelectItem>
                           </SelectContent>
                         </Select>

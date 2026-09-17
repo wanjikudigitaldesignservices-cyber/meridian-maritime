@@ -3,10 +3,12 @@ import { Button } from '@/components/ui/button';
 import { LoadLineRule } from '@/components/brand/LoadLineRule';
 import { ServiceCard } from '@/components/cards/ServiceCard';
 import { Link } from 'react-router-dom';
-import servicesData from '@/data/seed/services.json';
+import { useServices } from '@/hooks/useSupabaseData';
 
 export function RegionHome() {
   const { region: currentRegion, isRegionValid } = useRegion();
+
+  const { data: servicesData, isLoading, error } = useServices();
 
   if (!isRegionValid || !currentRegion) {
     return <div className="min-h-screen" />;
@@ -14,7 +16,8 @@ export function RegionHome() {
 
   const isAntarctica = currentRegion.slug === 'antarctica';
   // Use serviceSlugs array from regions to determine which services are featured
-  const regionServices = servicesData.filter((s: any) => currentRegion.serviceSlugs.includes(s.slug));
+  const services = servicesData || [];
+  const regionServices = services.filter(s => currentRegion.serviceSlugs.includes(s.slug as any));
 
   return (
     <div className="flex flex-col w-full">
@@ -85,16 +88,22 @@ export function RegionHome() {
             </Button>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {regionServices.map((service: any) => (
-              <ServiceCard 
-                key={service.id}
-                service={service}
-                regionSlug={currentRegion.slug}
-                accentColor={currentRegion.accent}
-              />
-            ))}
-          </div>
+          {isLoading ? (
+            <div className="py-12 text-center text-steel">Loading services...</div>
+          ) : error ? (
+            <div className="py-12 text-center text-red-500">Failed to load services.</div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {regionServices.map((service: any) => (
+                <ServiceCard 
+                  key={service.id}
+                  service={service}
+                  regionSlug={currentRegion.slug}
+                  accentColor={currentRegion.accent}
+                />
+              ))}
+            </div>
+          )}
         </div>
       </section>
 

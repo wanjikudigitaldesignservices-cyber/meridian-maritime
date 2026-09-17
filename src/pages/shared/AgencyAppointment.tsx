@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
 import { REGIONS } from '@/lib/regions';
-import portsData from '@/data/seed/ports.json';
+import { usePorts } from '@/hooks/useSupabaseData';
 
 import {
   Form,
@@ -59,9 +59,12 @@ export function AgencyAppointment() {
     }
   });
 
+  const { data: portsData, isLoading: isLoadingPorts } = usePorts();
+
   if (!region) return null;
 
-  const regionalPorts = portsData.filter(p => p.region === region.slug);
+  const ports = portsData || [];
+  const regionalPorts = ports.filter(p => p.region === region.slug);
 
   const onSubmit = async (data: AgencyFormValues) => {
     // Simulate API
@@ -169,9 +172,13 @@ export function AgencyAppointment() {
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          {regionalPorts.map(p => (
-                            <SelectItem key={p.slug} value={p.slug}>{p.name}</SelectItem>
-                          ))}
+                          {isLoadingPorts ? (
+                            <SelectItem value="loading" disabled>Loading ports...</SelectItem>
+                          ) : (
+                            regionalPorts.map(p => (
+                              <SelectItem key={p.slug} value={p.slug}>{p.name}</SelectItem>
+                            ))
+                          )}
                           <SelectItem value="other">Other</SelectItem>
                         </SelectContent>
                       </Select>

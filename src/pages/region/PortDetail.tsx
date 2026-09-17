@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import portsData from '@/data/seed/ports.json';
+import { usePorts } from '@/hooks/useSupabaseData';
 import { REGIONS } from '@/lib/regions';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft } from 'lucide-react';
@@ -7,9 +7,20 @@ import { ArrowLeft } from 'lucide-react';
 export function PortDetail() {
   const { regionId, portSlug } = useParams();
   const region = REGIONS.find(r => r.slug === regionId);
-  const port = portsData.find(p => p.slug === portSlug && p.region === regionId);
+  const { data: portsData, isLoading, error } = usePorts();
 
-  if (!region || !port) {
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-plimsoll flex items-center justify-center">
+        <p className="text-xl text-steel">Loading port data...</p>
+      </div>
+    );
+  }
+
+  const ports = portsData || [];
+  const port = ports.find(p => p.slug === portSlug && p.region === regionId);
+
+  if (!region || !port || error) {
     return (
       <div className="min-h-screen bg-plimsoll flex items-center justify-center">
         <p className="text-xl text-deck-grey">Port not found.</p>

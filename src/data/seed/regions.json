@@ -1,0 +1,241 @@
+[
+  {
+    "id": "1733320c-c3b0-4ddb-9edc-1e4a0d3585cc",
+    "slug": "africa",
+    "entity_name": "Meridian East Africa Ltd",
+    "continent": "Africa",
+    "country": "Kenya",
+    "primary_port": "Port of Mombasa (Kilindini Harbour)",
+    "unlocode": "KEMBA",
+    "lat": "04°03′S",
+    "lng": "039°40′E",
+    "timezone": "Africa/Nairobi",
+    "load_line_zone": "T",
+    "accent_hex": "#E0A526",
+    "currency": "KES",
+    "languages": [
+      "en",
+      "sw"
+    ],
+    "emergency_phone": "+254 700 000 001",
+    "office_phone": "+254 41 200 0000",
+    "email": "mombasa@meridianmaritime.com",
+    "address": "Kilindini Road, Mombasa, Kenya",
+    "hero_headline": "The ship berths in Mombasa. The cargo doesn't stop there.",
+    "hero_subline": "Ship agency, customs clearance and Northern Corridor haulage to Kampala, Kigali, Juba and Goma — under one job number.",
+    "positioning": "Mombasa is the gateway to the Northern Corridor. Cargo landed here moves inland to Uganda, Rwanda, South Sudan, Burundi and eastern DRC. We specialise in inland corridor logistics and customs clearance.",
+    "regulators": [
+      "Kenya Maritime Authority (KMA)",
+      "Kenya Ports Authority (KPA)",
+      "Kenya Revenue Authority (KRA Customs)",
+      "Kenya Data Protection Act 2019"
+    ],
+    "licences": [
+      "Licensed Clearing & Forwarding Agent"
+    ]
+  },
+  {
+    "id": "a072f7b4-eccc-4fc3-b81f-22aa76f5d6c7",
+    "slug": "europe",
+    "entity_name": "Meridian Maritime Europe B.V.",
+    "continent": "Europe",
+    "country": "Netherlands",
+    "primary_port": "Port of Rotterdam",
+    "unlocode": "NLRTM",
+    "lat": "51°55′N",
+    "lng": "004°28′E",
+    "timezone": "Europe/Amsterdam",
+    "load_line_zone": "S",
+    "accent_hex": "#1B6CA8",
+    "currency": "EUR",
+    "languages": [
+      "en",
+      "nl"
+    ],
+    "emergency_phone": "+31 10 000 0001",
+    "office_phone": "+31 10 200 0000",
+    "email": "rotterdam@meridianmaritime.com",
+    "address": "Wilhelminakade, 3072 AP Rotterdam, Netherlands",
+    "hero_headline": "Compliance is now part of the bunker price.",
+    "hero_subline": "EU ETS surrender, FuelEU pooling, LNG and bio-blend bunkering, and Rhine barge logistics from the largest port in Europe.",
+    "positioning": "Rotterdam is Europe's largest port and the world's largest bunkering hub. We guide operators through EU ETS and FuelEU Maritime compliance, alongside conventional and alternative fuels bunkering and Rhine logistics.",
+    "regulators": [
+      "Port of Rotterdam Authority",
+      "Dutch Human Environment and Transport Inspectorate (ILT)",
+      "EU ETS",
+      "FuelEU Maritime",
+      "GDPR"
+    ],
+    "licences": [
+      "AEO-certified customs",
+      "EU excise warehousing"
+    ]
+  },
+  {
+    "id": "1e839276-0c5b-4fdd-a548-bafc3b9b9f54",
+    "slug": "asia",
+    "entity_name": "Meridian Maritime Group Pte Ltd",
+    "continent": "Asia",
+    "country": "Singapore",
+    "primary_port": "Port of Singapore",
+    "unlocode": "SGSIN",
+    "lat": "01°16′N",
+    "lng": "103°50′E",
+    "timezone": "Asia/Singapore",
+    "load_line_zone": "TF",
+    "accent_hex": "#C8102E",
+    "currency": "SGD",
+    "languages": [
+      "en",
+      "zh"
+    ],
+    "emergency_phone": "+65 6000 0001",
+    "office_phone": "+65 6200 0000",
+    "email": "singapore@meridianmaritime.com",
+    "address": "1 Maritime Square, Singapore",
+    "hero_headline": "Twenty-four vessels under management. One accountable operator.",
+    "hero_subline": "Technical management, crewing, chartering and mass-flow-metered bunkering from the group's Singapore headquarters.",
+    "positioning": "As Group HQ, Singapore is our commercial and technical core. We provide full technical ship management, crew management, chartering brokerage, and mass-flow-metered bunkering.",
+    "regulators": [
+      "Maritime and Port Authority of Singapore (MPA)",
+      "Singapore Registry of Ships",
+      "Personal Data Protection Act (PDPA)"
+    ],
+    "licences": [
+      "MPA-licensed bunkering"
+    ]
+  },
+  {
+    "id": "b4e677ba-4b24-400c-9516-99b65e1e0819",
+    "slug": "north-america",
+    "entity_name": "Meridian Marine Services LLC",
+    "continent": "North America",
+    "country": "United States",
+    "primary_port": "Port of Houston (Houston Ship Channel)",
+    "unlocode": "USHOU",
+    "lat": "29°45′N",
+    "lng": "095°16′W",
+    "timezone": "America/Chicago",
+    "load_line_zone": "S",
+    "accent_hex": "#B4531F",
+    "currency": "USD",
+    "languages": [
+      "en",
+      "es"
+    ],
+    "emergency_phone": "+1 713 000 0001",
+    "office_phone": "+1 713 200 0000",
+    "email": "houston@meridianmaritime.com",
+    "address": "1 Clinton Drive, Houston, TX 77029, USA",
+    "hero_headline": "The Ship Channel does not forgive a late filing.",
+    "hero_subline": "Tanker agency, lightering coordination, offshore support and CBP-licensed customs brokerage across the US Gulf.",
+    "positioning": "Operating in the US Gulf energy sector requires flawless regulatory compliance. We handle tanker agency, offshore vessel support, lightering, and stringent CBP/Jones Act compliance.",
+    "regulators": [
+      "US Coast Guard (USCG)",
+      "Customs and Border Protection (CBP)",
+      "MTSA/TWIC",
+      "EPA Vessel Incidental Discharge Act",
+      "Jones Act"
+    ],
+    "licences": [
+      "CBP-licensed customs brokerage"
+    ]
+  },
+  {
+    "id": "a96ef9f8-7620-491a-9d55-01bd3245d083",
+    "slug": "south-america",
+    "entity_name": "Meridian Marítima Brasil Ltda",
+    "continent": "South America",
+    "country": "Brazil",
+    "primary_port": "Port of Santos",
+    "unlocode": "BRSSZ",
+    "lat": "23°57′S",
+    "lng": "046°18′W",
+    "timezone": "America/Sao_Paulo",
+    "load_line_zone": "S",
+    "accent_hex": "#1E7A5F",
+    "currency": "BRL",
+    "languages": [
+      "pt",
+      "en"
+    ],
+    "emergency_phone": "+55 13 0000 0001",
+    "office_phone": "+55 13 2000 0000",
+    "email": "santos@meridianmaritime.com",
+    "address": "Av. Conselheiro Rodrigues Alves, Santos, SP, Brazil",
+    "hero_headline": "The harvest has a sailing date.",
+    "hero_subline": "Agri-bulk line-up, reefer cold chain, Siscomex clearance and cabotage agency at the largest port in Latin America.",
+    "positioning": "Santos is the export gate for Brazilian agriculture. We manage agri-bulk berth coordination, cold chain reefer logistics, Siscomex customs clearance, and cabotage support.",
+    "regulators": [
+      "ANTAQ (National Waterway Transport Agency)",
+      "Marinha do Brasil (Port Captaincy)",
+      "Receita Federal",
+      "LGPD (Lei Geral de Proteção de Dados)"
+    ],
+    "licences": []
+  },
+  {
+    "id": "799e71c6-60a8-47db-96d1-bbe325c8c745",
+    "slug": "oceania",
+    "entity_name": "Meridian Maritime Australia Pty Ltd",
+    "continent": "Oceania",
+    "country": "Australia",
+    "primary_port": "Port of Fremantle, Western Australia",
+    "unlocode": "AUFRE",
+    "lat": "32°03′S",
+    "lng": "115°44′E",
+    "timezone": "Australia/Perth",
+    "load_line_zone": "S",
+    "accent_hex": "#A8471F",
+    "currency": "AUD",
+    "languages": [
+      "en"
+    ],
+    "emergency_phone": "+61 8 0000 0001",
+    "office_phone": "+61 8 9200 0000",
+    "email": "fremantle@meridianmaritime.com",
+    "address": "Queen Victoria Street, Fremantle WA 6160, Australia",
+    "hero_headline": "A biofouling hold-up costs more than the survey.",
+    "hero_subline": "Bulk berth agency, draught surveys, offshore support and biosecurity readiness across Fremantle, Port Hedland and Dampier.",
+    "positioning": "Western Australia is a dry bulk export powerhouse. We combine bulk berth agency with rigorous biosecurity readiness and offshore subsea support across the North West Shelf.",
+    "regulators": [
+      "Australian Maritime Safety Authority (AMSA)",
+      "Department of Agriculture Fisheries and Forestry (biosecurity)",
+      "Modern Slavery Act 2018",
+      "Privacy Act 1988"
+    ],
+    "licences": []
+  },
+  {
+    "id": "8ef6232b-0fe6-498a-9d08-11caf4261e48",
+    "slug": "antarctica",
+    "entity_name": "Meridian Polar Operations",
+    "continent": "Antarctica",
+    "country": "None",
+    "primary_port": "Punta Arenas, Chile (staging)",
+    "unlocode": "CLPUQ",
+    "lat": "53°10′S",
+    "lng": "070°54′W",
+    "timezone": "America/Punta_Arenas",
+    "load_line_zone": "W",
+    "accent_hex": "#5FA8C7",
+    "currency": "USD",
+    "languages": [
+      "en"
+    ],
+    "emergency_phone": "+56 61 000 0001",
+    "office_phone": "+56 61 200 0000",
+    "email": "polar@meridianmaritime.com",
+    "address": "Gateway Office, Punta Arenas, Magallanes, Chile",
+    "hero_headline": "Nothing is left behind. That includes the paperwork.",
+    "hero_subline": "Polar Code compliance, station resupply, ice-class vessel support and waste back-load across the Drake Passage.",
+    "positioning": "Operating under the Antarctic Treaty System and IMO Polar Code, we provide seasonal support for research station resupply, ice-class vessel husbandry, and strict environmental compliance.",
+    "regulators": [
+      "Antarctic Treaty System",
+      "IMO Polar Code",
+      "Environmental Protocol",
+      "IAATO"
+    ],
+    "licences": []
+  }
+]

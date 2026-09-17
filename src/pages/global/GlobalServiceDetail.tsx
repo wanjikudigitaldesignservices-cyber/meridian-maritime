@@ -1,12 +1,23 @@
 import { useParams, Link } from 'react-router-dom';
 import { REGIONS, type ServiceSlug } from '@/lib/regions';
-import servicesData from '@/data/seed/services.json';
+import { useServices } from '@/hooks/useSupabaseData';
 
 export function GlobalServiceDetail() {
   const { serviceSlug } = useParams();
-  const service = servicesData.find(s => s.slug === serviceSlug);
+  const { data: servicesData, isLoading, error } = useServices();
 
-  if (!service) {
+  if (isLoading) {
+    return (
+      <div className="min-h-screen bg-plimsoll flex items-center justify-center">
+        <p className="text-xl text-steel">Loading service data...</p>
+      </div>
+    );
+  }
+
+  const services = servicesData || [];
+  const service = services.find(s => s.slug === serviceSlug);
+
+  if (!service || error) {
     return (
       <div className="min-h-screen bg-plimsoll flex items-center justify-center">
         <p className="text-xl text-deck-grey">Service not found.</p>
