@@ -23,12 +23,12 @@ export function RegionHome() {
     <div className="flex flex-col w-full">
       {/* Hero Section */}
       <section className="relative w-full h-[80vh] min-h-[600px] flex items-center bg-hull overflow-hidden">
-        {/* Background Image (Mock) */}
+        {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hull/70 mix-blend-multiply z-10" />
           <img 
-            src={`https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=1920`}
-            alt="Hero background"
+            src={currentRegion.heroImageUrl || "https://images.unsplash.com/photo-1577717903315-1691ae25ab3f?auto=format&fit=crop&q=80&w=1920"}
+            alt={`${currentRegion.entityName} Hero background`}
             className="w-full h-full object-cover saturate-85"
           />
         </div>

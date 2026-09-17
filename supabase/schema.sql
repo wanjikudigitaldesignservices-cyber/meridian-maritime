@@ -60,6 +60,7 @@ create table region_services (
   local_description text,
   indicative_rate_note text,
   is_featured boolean default false,
+  image_url text,
   sort_order int default 0,
   unique (region_id, service_id)
 );

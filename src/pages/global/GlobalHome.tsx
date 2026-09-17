@@ -6,10 +6,14 @@ import { Button } from '@/components/ui/button';
 import { X, ArrowRight, Ship, Package, Anchor, Navigation, ShieldCheck, Map, Globe, Briefcase, FileText } from 'lucide-react';
 import { LoadLineRule } from '@/components/brand/LoadLineRule';
 import { CoordinateBlock } from '@/components/brand/CoordinateBlock';
+import { usePosts } from '@/hooks/useSupabaseData';
 
 export function GlobalHome() {
   const [suggestedRegion, setSuggestedRegion] = useState<RegionSlug | null>(null);
   const [times, setTimes] = useState<Record<string, string>>({});
+  
+  const { data: postsData, isLoading: isLoadingPosts, error: postsError } = usePosts();
+  const latestPosts = postsData ? postsData.slice(0, 3) : [];
 
   useEffect(() => {
     const saved = localStorage.getItem('mmg_region') as RegionSlug;
@@ -252,7 +256,7 @@ export function GlobalHome() {
         </div>
       </section>
 
-      {/* 8. Latest Insights (Placeholder) */}
+      {/* 8. Latest Insights */}
       <section className="section-spacing bg-plimsoll">
         <div className="container mx-auto px-4 sm:px-6">
           <div className="flex justify-between items-end mb-12">
@@ -263,14 +267,37 @@ export function GlobalHome() {
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[1, 2, 3].map(i => (
-              <div key={i} className="mmg-card p-6 opacity-60">
-                <div className="w-12 h-1 mb-4 bg-steel"></div>
-                <div className="text-xs font-mono text-deck-grey mb-2">MARITIME REGULATION</div>
-                <h3 className="font-heading text-lg text-hull mb-3">Placeholder Insight Title for Article {i}</h3>
-                <p className="text-sm text-deck-grey">Once the database is populated, the latest published insights will dynamically load here.</p>
-              </div>
-            ))}
+            {isLoadingPosts ? (
+               <div className="col-span-3 py-12 text-center text-steel">Loading insights...</div>
+            ) : postsError ? (
+               <div className="col-span-3 py-12 text-center text-red-500">Failed to load insights.</div>
+            ) : latestPosts && latestPosts.length > 0 ? (
+              latestPosts.map((post: any) => (
+                <Link key={post.id} to={`/insights/${post.slug}`} className="group mmg-card overflow-hidden flex flex-col hover:border-accent">
+                  <div className="h-48 w-full overflow-hidden bg-steel/20">
+                    {post.cover_image_url ? (
+                      <img src={post.cover_image_url} alt={post.title} className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                    ) : (
+                      <div className="w-full h-full flex items-center justify-center">
+                        <FileText className="w-12 h-12 text-steel opacity-50" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="p-6 flex flex-col flex-1">
+                    <div className="text-xs font-mono text-accent mb-2 uppercase tracking-wider">
+                      {post.is_news ? 'NEWS' : 'INSIGHT'} • {new Date(post.published_at).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric'})}
+                    </div>
+                    <h3 className="font-heading text-lg text-hull mb-3 group-hover:text-accent transition-colors line-clamp-2">{post.title}</h3>
+                    <p className="text-sm text-deck-grey line-clamp-3 mb-4">{post.excerpt}</p>
+                    <div className="mt-auto text-sm font-medium text-hull flex items-center gap-1 group-hover:text-accent transition-colors">
+                      Read more <ArrowRight className="w-4 h-4" />
+                    </div>
+                  </div>
+                </Link>
+              ))
+            ) : (
+              <div className="col-span-3 py-12 text-center text-deck-grey">No insights published yet.</div>
+            )}
           </div>
         </div>
       </section>

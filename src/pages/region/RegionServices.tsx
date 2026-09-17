@@ -38,7 +38,15 @@ export function RegionServices() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {regionalServices.map(service => (
               <div key={service.id} className="bg-white border border-steel/20 flex flex-col h-full group hover:shadow-md transition-shadow">
-                <div className="p-8 flex flex-col flex-1">
+                <div className="h-48 w-full bg-steel/20 relative overflow-hidden">
+                  <img 
+                    src={service.hero_image_url || `https://images.unsplash.com/photo-1581454558237-7756e7e4a3b7?auto=format&fit=crop&q=80&w=600`} 
+                    alt={service.name} 
+                    className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-hull/80 to-transparent mix-blend-multiply" />
+                </div>
+                <div className="p-8 flex flex-col flex-1 relative z-10">
                   <div className="text-xs font-mono uppercase tracking-wider mb-4" style={{ color: region.accent }}>
                     {service.division} Division
                   </div>

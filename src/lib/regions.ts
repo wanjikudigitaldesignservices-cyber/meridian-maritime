@@ -59,6 +59,7 @@ export interface Region {
   serviceSlugs: ServiceSlug[];
   regulators: string[];
   licences: string[];
+  heroImageUrl?: string;
   heroHeadline: string;
   heroSubline: string;
   positioning: string;
@@ -89,6 +90,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['Kenya Maritime Authority (KMA)', 'Kenya Ports Authority (KPA)', 'Kenya Revenue Authority (KRA Customs)', 'Kenya Data Protection Act 2019'],
     licences: ['Licensed Clearing & Forwarding Agent'],
+    heroImageUrl: '/images/regions/hero_africa.jpg',
     heroHeadline: "The ship berths in Mombasa. The cargo doesn't stop there.",
     heroSubline: "Ship agency, customs clearance and Northern Corridor haulage to Kampala, Kigali, Juba and Goma — under one job number.",
     positioning: "Mombasa is the gateway to the Northern Corridor. Cargo landed here moves inland to Uganda, Rwanda, South Sudan, Burundi and eastern DRC. We specialise in inland corridor logistics and customs clearance.",
@@ -117,6 +119,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['Port of Rotterdam Authority', 'Dutch Human Environment and Transport Inspectorate (ILT)', 'EU ETS', 'FuelEU Maritime', 'GDPR'],
     licences: ['AEO-certified customs', 'EU excise warehousing'],
+    heroImageUrl: '/images/regions/hero_europe.jpg',
     heroHeadline: "Compliance is now part of the bunker price.",
     heroSubline: "EU ETS surrender, FuelEU pooling, LNG and bio-blend bunkering, and Rhine barge logistics from the largest port in Europe.",
     positioning: "Rotterdam is Europe's largest port and the world's largest bunkering hub. We guide operators through EU ETS and FuelEU Maritime compliance, alongside conventional and alternative fuels bunkering and Rhine logistics.",
@@ -145,6 +148,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['Maritime and Port Authority of Singapore (MPA)', 'Singapore Registry of Ships', 'Personal Data Protection Act (PDPA)'],
     licences: ['MPA-licensed bunkering'],
+    heroImageUrl: '/images/regions/hero_asia.jpg',
     heroHeadline: "Twenty-four vessels under management. One accountable operator.",
     heroSubline: "Technical management, crewing, chartering and mass-flow-metered bunkering from the group's Singapore headquarters.",
     positioning: "As Group HQ, Singapore is our commercial and technical core. We provide full technical ship management, crew management, chartering brokerage, and mass-flow-metered bunkering.",
@@ -173,6 +177,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['US Coast Guard (USCG)', 'Customs and Border Protection (CBP)', 'MTSA/TWIC', 'EPA Vessel Incidental Discharge Act', 'Jones Act'],
     licences: ['CBP-licensed customs brokerage'],
+    heroImageUrl: '/images/regions/hero_north_america.jpg',
     heroHeadline: "The Ship Channel does not forgive a late filing.",
     heroSubline: "Tanker agency, lightering coordination, offshore support and CBP-licensed customs brokerage across the US Gulf.",
     positioning: "Operating in the US Gulf energy sector requires flawless regulatory compliance. We handle tanker agency, offshore vessel support, lightering, and stringent CBP/Jones Act compliance.",
@@ -201,6 +206,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['ANTAQ (National Waterway Transport Agency)', 'Marinha do Brasil (Port Captaincy)', 'Receita Federal', 'LGPD (Lei Geral de Proteção de Dados)'],
     licences: [],
+    heroImageUrl: '/images/regions/hero_south_america.jpg',
     heroHeadline: "The harvest has a sailing date.",
     heroSubline: "Agri-bulk line-up, reefer cold chain, Siscomex clearance and cabotage agency at the largest port in Latin America.",
     positioning: "Santos is the export gate for Brazilian agriculture. We manage agri-bulk berth coordination, cold chain reefer logistics, Siscomex customs clearance, and cabotage support.",
@@ -229,6 +235,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['Australian Maritime Safety Authority (AMSA)', 'Department of Agriculture Fisheries and Forestry (biosecurity)', 'Modern Slavery Act 2018', 'Privacy Act 1988'],
     licences: [],
+    heroImageUrl: '/images/regions/hero_oceania.jpg',
     heroHeadline: "A biofouling hold-up costs more than the survey.",
     heroSubline: "Bulk berth agency, draught surveys, offshore support and biosecurity readiness across Fremantle, Port Hedland and Dampier.",
     positioning: "Western Australia is a dry bulk export powerhouse. We combine bulk berth agency with rigorous biosecurity readiness and offshore subsea support across the North West Shelf.",
@@ -257,6 +264,7 @@ export const REGIONS: Region[] = [
     ],
     regulators: ['Antarctic Treaty System', 'IMO Polar Code', 'Environmental Protocol', 'IAATO'],
     licences: [],
+    heroImageUrl: '/images/regions/hero_antarctica.jpg',
     heroHeadline: "Nothing is left behind. That includes the paperwork.",
     heroSubline: "Polar Code compliance, station resupply, ice-class vessel support and waste back-load across the Drake Passage.",
     positioning: "Operating under the Antarctic Treaty System and IMO Polar Code, we provide seasonal support for research station resupply, ice-class vessel husbandry, and strict environmental compliance.",

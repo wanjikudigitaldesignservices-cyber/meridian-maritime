@@ -24,6 +24,10 @@ import { RegionTeam } from '@/pages/region/RegionTeam';
 import { RegionHome } from '@/pages/region/RegionHome';
 import { QuotePage } from '@/pages/shared/QuotePage';
 import { AgencyAppointment } from '@/pages/shared/AgencyAppointment';
+import { GlobalAbout } from '@/pages/global/GlobalAbout';
+import { GlobalCareers } from '@/pages/global/GlobalCareers';
+import { RegionAbout } from '@/pages/region/RegionAbout';
+import { RegionCareers } from '@/pages/region/RegionCareers';
 import { SeafarerApplication } from '@/pages/global/SeafarerApplication';
 import { ShoreApplication } from '@/pages/global/ShoreApplication';
 import { TrackPage } from '@/pages/global/TrackPage';
@@ -39,7 +43,7 @@ export default function App() {
         {/* Global Routes */}
         <Route element={<GlobalLayout />}>
           <Route path="/" element={<GlobalHome />} />
-          <Route path="/about" element={<PlaceholderPage />} />
+          <Route path="/about" element={<GlobalAbout />} />
           <Route path="/about/governance" element={<PlaceholderPage />} />
           <Route path="/about/hsseq" element={<PlaceholderPage />} />
           <Route path="/sustainability" element={<SustainabilityPage />} />
@@ -51,7 +55,7 @@ export default function App() {
           <Route path="/news" element={<PlaceholderPage />} />
           <Route path="/news/:postSlug" element={<PlaceholderPage />} />
           <Route path="/insights" element={<GlobalInsights />} />
-          <Route path="/careers" element={<PlaceholderPage />} />
+          <Route path="/careers" element={<GlobalCareers />} />
           <Route path="/careers/seafarer" element={<SeafarerApplication />} />
           <Route path="/careers/shore" element={<ShoreApplication />} />
           <Route path="/careers/:jobId" element={<PlaceholderPage />} />
@@ -73,7 +77,7 @@ export default function App() {
         <Route path="/:regionId" element={<RegionGuard />}>
           <Route element={<RegionLayout />}>
             <Route index element={<RegionHome />} />
-            <Route path="about" element={<PlaceholderPage />} />
+            <Route path="about" element={<RegionAbout />} />
             <Route path="services" element={<RegionServices />} />
             <Route path="services/:serviceSlug" element={<RegionServiceDetail />} />
             <Route path="ports" element={<RegionPorts />} />
@@ -82,7 +86,7 @@ export default function App() {
             <Route path="insights" element={<RegionInsights />} />
             <Route path="insights/:postSlug" element={<PostDetail />} />
             <Route path="news" element={<PlaceholderPage />} />
-            <Route path="careers" element={<PlaceholderPage />} />
+            <Route path="careers" element={<RegionCareers />} />
             <Route path="quote" element={<QuotePage />} />
             <Route path="contact" element={<AgencyAppointment />} />
             <Route path="compliance" element={<PlaceholderPage />} />

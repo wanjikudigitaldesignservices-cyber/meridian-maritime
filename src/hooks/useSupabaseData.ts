@@ -161,3 +161,27 @@ export function usePeople(regionSlug?: RegionSlug) {
     enabled: regionSlug ? !!regionMap : true
   });
 }
+
+export function usePosts(regionSlug?: RegionSlug) {
+  const { data: regionMap } = useRegionMap();
+
+  return useQuery({
+    queryKey: ['posts', regionSlug],
+    queryFn: async () => {
+      let query = supabase.from('posts').select(`
+        id, slug, title, excerpt, cover_image_url, status, is_news,
+        read_minutes, published_at, regions (slug)
+      `).eq('status', 'published').order('published_at', { ascending: false });
+      
+      if (regionSlug && regionMap) {
+        query = query.eq('region_id', regionMap[regionSlug]);
+      }
+      
+      const { data, error } = await query;
+      if (error) throw error;
+      
+      return data;
+    },
+    enabled: regionSlug ? !!regionMap : true
+  });
+}
