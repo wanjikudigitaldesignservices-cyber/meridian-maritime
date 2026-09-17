@@ -1,6 +1,6 @@
 import { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Anchor, Filter } from 'lucide-react';
+import { ArrowRight, Anchor } from 'lucide-react';
 import { useVessels } from '@/hooks/useSupabaseData';
 
 export function GlobalFleet() {

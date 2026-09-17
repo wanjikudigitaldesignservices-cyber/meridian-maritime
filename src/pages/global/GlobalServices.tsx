@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { REGIONS, type ServiceSlug } from '@/lib/regions';
-import { ArrowRight, Anchor } from 'lucide-react';
 import { useServices } from '@/hooks/useSupabaseData';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
@@ -13,7 +12,7 @@ export function GlobalServices() {
   const servicesByDivision = divisions.reduce((acc, div) => {
     acc[div] = services.filter(s => s.division === div);
     return acc;
-  }, {} as Record<string, typeof services>);
+  }, {} as Record<string, any[]>);
 
   return (
     <div className="w-full bg-plimsoll min-h-screen">
@@ -33,14 +32,14 @@ export function GlobalServices() {
           <div className="py-24 text-center text-red-500">Failed to load services.</div>
         ) : (
           <Accordion type="single" collapsible className="w-full space-y-4">
-            {Object.entries(servicesByDivision).map(([division, services]) => (
+            {(Object.entries(servicesByDivision) as [string, any[]][]).map(([division, services]) => (
               <AccordionItem key={division} value={division} className="border border-steel/20 bg-white shadow-sm px-6">
                 <AccordionTrigger className="hover:no-underline text-2xl font-heading text-hull py-6">
                   {division} Division
                 </AccordionTrigger>
                 <AccordionContent className="pb-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4">
-                    {services.map(service => {
+                    {services.map((service: any) => {
                       const offeringRegions = REGIONS.filter(r => r.serviceSlugs.includes(service.slug as ServiceSlug));
                       
                       return (

@@ -65,12 +65,10 @@ export function PortDetail() {
             <div className="bg-white p-6">
               <div className="text-xs text-deck-grey uppercase tracking-wider mb-2">Max Draught</div>
               <div className="text-3xl font-mono text-hull">{port.maxDraught}m</div>
-              {port.indicative && <div className="text-xs text-deck-grey mt-1">* Indicative figure</div>}
             </div>
             <div className="bg-white p-6">
               <div className="text-xs text-deck-grey uppercase tracking-wider mb-2">Max LOA</div>
               <div className="text-3xl font-mono text-hull">{port.maxLoa}m</div>
-              {port.indicative && <div className="text-xs text-deck-grey mt-1">* Indicative figure</div>}
             </div>
             <div className="bg-white p-6">
               <div className="text-xs text-deck-grey uppercase tracking-wider mb-2">Total Berths</div>
@@ -86,7 +84,7 @@ export function PortDetail() {
 
           <h2 className="text-2xl font-heading text-hull mb-6">Supported Cargo Types</h2>
           <div className="flex flex-wrap gap-3">
-            {port.cargoTypes.map(type => (
+            {port.cargoTypes.map((type: string) => (
               <div key={type} className="bg-white border border-steel/20 px-4 py-2 rounded-sm text-sm uppercase tracking-wider text-deck-grey">
                 {type.replace('-', ' ')}
               </div>

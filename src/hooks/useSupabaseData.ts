@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { supabase } from '@/lib/supabase';
-import { REGIONS, type RegionSlug, type Region } from '@/lib/regions';
+import { type RegionSlug } from '@/lib/regions';
 
 // We'll keep using the static REGIONS array from lib/regions.ts for layout config (colors, homeSectionOrder, etc),
 // but we will fetch the DB uuid mapping here to query relational data.
@@ -11,7 +11,7 @@ export function useRegionMap() {
       const { data, error } = await supabase.from('regions').select('id, slug, is_active');
       if (error) throw error;
       const map: Record<string, string> = {};
-      data.forEach(r => { map[r.slug] = r.id; });
+      (data as any[]).forEach(r => { map[r.slug] = r.id; });
       return map;
     },
     staleTime: 1000 * 60 * 60, // 1 hour
@@ -37,7 +37,7 @@ export function usePorts(regionSlug?: RegionSlug) {
       const { data, error } = await query;
       if (error) throw error;
       
-      return data.map(p => ({
+      return (data as any[]).map(p => ({
         id: p.id,
         slug: p.slug,
         name: p.name,
@@ -47,7 +47,7 @@ export function usePorts(regionSlug?: RegionSlug) {
         maxDraught: p.max_draught_m,
         maxLoa: p.max_loa_m,
         berthCount: p.berth_count,
-        cargoTypes: p.cargo_types,
+        cargoTypes: p.cargo_types || [],
         region: p.regions?.slug
       }));
     },
@@ -71,14 +71,14 @@ export function useServices(regionSlug?: RegionSlug) {
           .eq('region_id', regionMap[regionSlug]);
         if (error) throw error;
         
-        return data.map(rs => ({
+        return (data as any[]).map(rs => ({
           ...rs.services,
           is_featured: rs.is_featured
         }));
       } else {
         const { data, error } = await supabase.from('services').select('*');
         if (error) throw error;
-        return data.map(s => ({
+        return (data as any[]).map(s => ({
           id: s.id,
           slug: s.slug,
           name: s.name,
@@ -113,7 +113,7 @@ export function useVessels(regionSlug?: RegionSlug) {
       const { data, error } = await query;
       if (error) throw error;
       
-      return data.map(v => ({
+      return (data as any[]).map(v => ({
         id: v.id,
         imoNumber: v.imo_number,
         name: v.name,
@@ -148,7 +148,7 @@ export function usePeople(regionSlug?: RegionSlug) {
       const { data, error } = await query;
       if (error) throw error;
       
-      return data.map(p => ({
+      return (data as any[]).map(p => ({
         id: p.id,
         name: p.full_name,
         title: p.job_title,

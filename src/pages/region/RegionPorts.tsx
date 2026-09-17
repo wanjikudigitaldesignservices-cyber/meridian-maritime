@@ -53,11 +53,11 @@ export function RegionPorts() {
                 <div className="grid grid-cols-2 gap-4 mb-6 flex-1">
                   <div>
                     <div className="text-xs text-deck-grey uppercase tracking-wider">Max Draught</div>
-                    <div className="font-mono text-hull">{port.maxDraught}m {port.indicative && '*'}</div>
+                    <div className="font-mono text-hull">{port.maxDraught}m</div>
                   </div>
                   <div>
                     <div className="text-xs text-deck-grey uppercase tracking-wider">Max LOA</div>
-                    <div className="font-mono text-hull">{port.maxLoa}m {port.indicative && '*'}</div>
+                    <div className="font-mono text-hull">{port.maxLoa}m</div>
                   </div>
                   <div>
                     <div className="text-xs text-deck-grey uppercase tracking-wider">Berths</div>
@@ -67,7 +67,7 @@ export function RegionPorts() {
 
                 <div className="mt-auto pt-4 border-t border-steel/10 flex justify-between items-center">
                   <div className="flex gap-2">
-                    {port.cargoTypes.map(type => (
+                    {port.cargoTypes.map((type: string) => (
                       <span key={type} className="text-[10px] uppercase tracking-wider bg-plimsoll px-2 py-1 rounded text-deck-grey">
                         {type.replace('-', ' ')}
                       </span>

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Anchor, ArrowRight, Navigation, MapPin } from 'lucide-react';
+import { Anchor } from 'lucide-react';
 import { usePorts } from '@/hooks/useSupabaseData';
 import { REGIONS } from '@/lib/regions';
 
