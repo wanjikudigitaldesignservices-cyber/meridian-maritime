@@ -1,0 +1,110 @@
+[
+  {
+    "id": "app-1",
+    "type": "shore",
+    "status": "screening",
+    "fullName": "Applicant 1",
+    "email": "applicant1@example.com",
+    "region": "europe",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-2",
+    "type": "seafarer",
+    "status": "interview",
+    "fullName": "Applicant 2",
+    "email": "applicant2@example.com",
+    "region": "asia",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-3",
+    "type": "shore",
+    "status": "offered",
+    "fullName": "Applicant 3",
+    "email": "applicant3@example.com",
+    "region": "north-america",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-4",
+    "type": "seafarer",
+    "status": "rejected",
+    "fullName": "Applicant 4",
+    "email": "applicant4@example.com",
+    "region": "south-america",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-5",
+    "type": "shore",
+    "status": "pooled",
+    "fullName": "Applicant 5",
+    "email": "applicant5@example.com",
+    "region": "oceania",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-6",
+    "type": "seafarer",
+    "status": "received",
+    "fullName": "Applicant 6",
+    "email": "applicant6@example.com",
+    "region": "antarctica",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-7",
+    "type": "shore",
+    "status": "screening",
+    "fullName": "Applicant 7",
+    "email": "applicant7@example.com",
+    "region": "africa",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-8",
+    "type": "seafarer",
+    "status": "interview",
+    "fullName": "Applicant 8",
+    "email": "applicant8@example.com",
+    "region": "europe",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-9",
+    "type": "shore",
+    "status": "offered",
+    "fullName": "Applicant 9",
+    "email": "applicant9@example.com",
+    "region": "asia",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-10",
+    "type": "seafarer",
+    "status": "rejected",
+    "fullName": "Applicant 10",
+    "email": "applicant10@example.com",
+    "region": "north-america",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-11",
+    "type": "shore",
+    "status": "pooled",
+    "fullName": "Applicant 11",
+    "email": "applicant11@example.com",
+    "region": "south-america",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  },
+  {
+    "id": "app-12",
+    "type": "seafarer",
+    "status": "received",
+    "fullName": "Applicant 12",
+    "email": "applicant12@example.com",
+    "region": "oceania",
+    "createdAt": "2026-09-17T15:46:10.043Z"
+  }
+]

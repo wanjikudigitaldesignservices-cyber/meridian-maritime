@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cat-1",
+    "slug": "regulation-compliance",
+    "name": "Regulation & Compliance"
+  },
+  {
+    "id": "cat-2",
+    "slug": "port-operations",
+    "name": "Port Operations"
+  },
+  {
+    "id": "cat-3",
+    "slug": "decarbonisation",
+    "name": "Decarbonisation"
+  },
+  {
+    "id": "cat-4",
+    "slug": "crewing-welfare",
+    "name": "Crewing & Welfare"
+  },
+  {
+    "id": "cat-5",
+    "slug": "market-insight",
+    "name": "Market Insight"
+  },
+  {
+    "id": "cat-6",
+    "slug": "safety",
+    "name": "Safety"
+  },
+  {
+    "id": "cat-7",
+    "slug": "technology",
+    "name": "Technology"
+  },
+  {
+    "id": "cat-8",
+    "slug": "company-news",
+    "name": "Company News"
+  }
+]

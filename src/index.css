@@ -1,0 +1,86 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+@layer base {
+  :root {
+    --hull: #0A1F33;
+    --steel: #16304A;
+    --deck-grey: #6B7A85;
+    --plimsoll: #F5F7F8;
+    --white: #FFFFFF;
+    --loadline: #C8102E;
+    --brass: #E8A33D;
+    --chart-cyan: #2E8BA8;
+    --sea-black: #050D16;
+    
+    --accent: var(--brass);
+    
+    --background: var(--plimsoll);
+    --foreground: var(--hull);
+    --card: var(--white);
+    --card-foreground: var(--hull);
+    --popover: var(--white);
+    --popover-foreground: var(--hull);
+    --primary: var(--hull);
+    --primary-foreground: var(--white);
+    --secondary: transparent;
+    --secondary-foreground: var(--hull);
+    --muted: var(--plimsoll);
+    --muted-foreground: var(--deck-grey);
+    --accent-bg: var(--plimsoll);
+    --accent-foreground: var(--hull);
+    --destructive: var(--loadline);
+    --destructive-foreground: var(--white);
+    --border: var(--steel);
+    --input: var(--steel);
+    --ring: var(--hull);
+    --radius: 4px;
+  }
+
+  .dark {
+    --hull: #0A1F33;
+    --plimsoll: #050D16;
+    
+    --background: var(--sea-black);
+    --foreground: var(--white);
+    --card: #081624;
+    --card-foreground: var(--white);
+    --popover: #081624;
+    --popover-foreground: var(--white);
+    --primary: var(--white);
+    --primary-foreground: var(--hull);
+    --secondary: transparent;
+    --secondary-foreground: var(--white);
+    --border: var(--steel);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tighter;
+  }
+}
+
+@layer components {
+  .section-spacing {
+    @apply py-14 md:py-24;
+  }
+
+  .mmg-card {
+    @apply border border-steel/12 rounded-[4px] bg-card text-card-foreground transition-all duration-200 ease-out;
+  }
+  
+  .mmg-card:hover {
+    @apply border-accent border-l-2;
+  }
+
+  img {
+    @apply saturate-[0.85];
+  }
+}

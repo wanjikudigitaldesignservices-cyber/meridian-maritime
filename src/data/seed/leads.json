@@ -1,0 +1,202 @@
+[
+  {
+    "id": "lead-1",
+    "type": "agency_appointment",
+    "status": "contacted",
+    "companyName": "Company 1 Ltd",
+    "contactName": "Contact 1",
+    "email": "contact1@example.com",
+    "region": "europe",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-2",
+    "type": "agency_appointment",
+    "status": "quoted",
+    "companyName": "Company 2 Ltd",
+    "contactName": "Contact 2",
+    "email": "contact2@example.com",
+    "region": "asia",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-3",
+    "type": "quote",
+    "status": "won",
+    "companyName": "Company 3 Ltd",
+    "contactName": "Contact 3",
+    "email": "contact3@example.com",
+    "region": "north-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-4",
+    "type": "agency_appointment",
+    "status": "lost",
+    "companyName": "Company 4 Ltd",
+    "contactName": "Contact 4",
+    "email": "contact4@example.com",
+    "region": "south-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-5",
+    "type": "agency_appointment",
+    "status": "new",
+    "companyName": "Company 5 Ltd",
+    "contactName": "Contact 5",
+    "email": "contact5@example.com",
+    "region": "oceania",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-6",
+    "type": "quote",
+    "status": "contacted",
+    "companyName": "Company 6 Ltd",
+    "contactName": "Contact 6",
+    "email": "contact6@example.com",
+    "region": "antarctica",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-7",
+    "type": "agency_appointment",
+    "status": "quoted",
+    "companyName": "Company 7 Ltd",
+    "contactName": "Contact 7",
+    "email": "contact7@example.com",
+    "region": "africa",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-8",
+    "type": "agency_appointment",
+    "status": "won",
+    "companyName": "Company 8 Ltd",
+    "contactName": "Contact 8",
+    "email": "contact8@example.com",
+    "region": "europe",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-9",
+    "type": "quote",
+    "status": "lost",
+    "companyName": "Company 9 Ltd",
+    "contactName": "Contact 9",
+    "email": "contact9@example.com",
+    "region": "asia",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-10",
+    "type": "agency_appointment",
+    "status": "new",
+    "companyName": "Company 10 Ltd",
+    "contactName": "Contact 10",
+    "email": "contact10@example.com",
+    "region": "north-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-11",
+    "type": "agency_appointment",
+    "status": "contacted",
+    "companyName": "Company 11 Ltd",
+    "contactName": "Contact 11",
+    "email": "contact11@example.com",
+    "region": "south-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-12",
+    "type": "quote",
+    "status": "quoted",
+    "companyName": "Company 12 Ltd",
+    "contactName": "Contact 12",
+    "email": "contact12@example.com",
+    "region": "oceania",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-13",
+    "type": "agency_appointment",
+    "status": "won",
+    "companyName": "Company 13 Ltd",
+    "contactName": "Contact 13",
+    "email": "contact13@example.com",
+    "region": "antarctica",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-14",
+    "type": "agency_appointment",
+    "status": "lost",
+    "companyName": "Company 14 Ltd",
+    "contactName": "Contact 14",
+    "email": "contact14@example.com",
+    "region": "africa",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-15",
+    "type": "quote",
+    "status": "new",
+    "companyName": "Company 15 Ltd",
+    "contactName": "Contact 15",
+    "email": "contact15@example.com",
+    "region": "europe",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-16",
+    "type": "agency_appointment",
+    "status": "contacted",
+    "companyName": "Company 16 Ltd",
+    "contactName": "Contact 16",
+    "email": "contact16@example.com",
+    "region": "asia",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-17",
+    "type": "agency_appointment",
+    "status": "quoted",
+    "companyName": "Company 17 Ltd",
+    "contactName": "Contact 17",
+    "email": "contact17@example.com",
+    "region": "north-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-18",
+    "type": "quote",
+    "status": "won",
+    "companyName": "Company 18 Ltd",
+    "contactName": "Contact 18",
+    "email": "contact18@example.com",
+    "region": "south-america",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-19",
+    "type": "agency_appointment",
+    "status": "lost",
+    "companyName": "Company 19 Ltd",
+    "contactName": "Contact 19",
+    "email": "contact19@example.com",
+    "region": "oceania",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  },
+  {
+    "id": "lead-20",
+    "type": "agency_appointment",
+    "status": "new",
+    "companyName": "Company 20 Ltd",
+    "contactName": "Contact 20",
+    "email": "contact20@example.com",
+    "region": "antarctica",
+    "createdAt": "2026-09-17T15:46:10.041Z"
+  }
+]

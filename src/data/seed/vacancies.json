@@ -1,0 +1,149 @@
+[
+  {
+    "id": "vac-1",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "africa",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-2",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "africa",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-3",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "europe",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-4",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "europe",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-5",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "asia",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-6",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "asia",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-7",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "north-america",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-8",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "north-america",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-9",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "south-america",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-10",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "south-america",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-11",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "oceania",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-12",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "oceania",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-13",
+    "title": "Chief Engineer",
+    "department": "seafarer",
+    "region": "antarctica",
+    "vesselType": "tanker",
+    "contractLength": "4 months",
+    "joiningPort": "Singapore",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  },
+  {
+    "id": "vac-14",
+    "title": "Operations Manager",
+    "department": "shore",
+    "region": "antarctica",
+    "location": "Regional Office",
+    "type": "Full-time",
+    "status": "open",
+    "postedAt": "2026-09-17T15:46:10.038Z"
+  }
+]
