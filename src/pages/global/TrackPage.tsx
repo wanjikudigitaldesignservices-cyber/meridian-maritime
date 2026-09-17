@@ -6,7 +6,7 @@ import { Search, MapPin, Anchor, CheckCircle2, Clock } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 // Mock function for AIS position as requested
-async function fetchAISPosition(reference: string) {
+async function fetchAISPosition(_reference: string) {
   return new Promise((resolve) => {
     setTimeout(() => {
       resolve({

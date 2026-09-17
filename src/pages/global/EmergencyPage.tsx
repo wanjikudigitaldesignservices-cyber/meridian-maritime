@@ -1,5 +1,5 @@
 import { REGIONS } from '@/lib/regions';
-import { PhoneAlert, Clock } from 'lucide-react';
+import { PhoneCall, Clock } from 'lucide-react';
 import { useEffect, useState } from 'react';
 
 export function EmergencyPage() {
@@ -14,7 +14,7 @@ export function EmergencyPage() {
     <div className="container mx-auto px-4 py-24 max-w-5xl">
       <div className="mb-16">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-loadline/10 text-loadline font-medium text-sm mb-6 uppercase tracking-widest">
-          <PhoneAlert className="w-4 h-4" />
+          <PhoneCall className="w-4 h-4" />
           24/7 Response
         </div>
         <h1 className="font-heading font-bold text-4xl md:text-5xl text-hull mb-6">Global Emergency Contacts</h1>
